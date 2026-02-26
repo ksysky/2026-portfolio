@@ -1,3 +1,6 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+
 /* 전역 스타일 */
 :root {
   --main-color: #412918;
@@ -179,7 +182,7 @@ main {
 
 .marquee-container {
   position: absolute;
-  top: 590px;
+  top: 660px;
   left: 0;
   z-index: -1;
   width: 100%;
@@ -192,7 +195,8 @@ main {
   font-size: 25rem;
   font-weight: 800;
   color: #f9f2ee;
-  animation: scrollX 50s linear infinite;
+  animation: scrollX 30s linear infinite;
+  animation-delay: 0.1s;
 }
 
 @keyframes scrollX {
@@ -368,10 +372,33 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  animation: fade-in 0.3s;
+  animation-fill-mode: forwards;
 }
 
 #projects .pro_cont.hide {
   display: none;
+  opacity: 0;
+  animation: fade-out 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 #projects .pro_cont .pro_list {
@@ -388,6 +415,7 @@ main {
   opacity: 0;
   visibility: hidden;
   position: absolute;
+  z-index: 5;
   background: var(--sub1-color);
   color: #fff;
   transition: all 0.3s ease-in-out;
@@ -438,6 +466,28 @@ main {
   display: block;
   width: 100%;
 }
+
+#projects .pro_cont .design {
+  position: relative;
+}
+
+#projects .pro_cont .design::after {
+  display: block;
+  content: "";
+  padding-bottom: 100%;
+}
+
+#projects .pro_cont .design img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  z-index: 0;
+}
+
 
 /* footer */
 footer {
@@ -708,6 +758,10 @@ footer .copyright {
   }
 
   /* main - projects */
+  #projects .tab_menu {
+    margin-bottom: 20px;
+  }
+
   #projects .tab_menu ul {
     gap: 5px;
   }
