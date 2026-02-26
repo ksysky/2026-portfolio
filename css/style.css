@@ -370,6 +370,10 @@ main {
   gap: 20px;
 }
 
+#projects .pro_cont.hide {
+  display: none;
+}
+
 #projects .pro_cont .pro_list {
   position: relative;
   border-radius: 30px;
