@@ -72,6 +72,7 @@ body {
   font-family: "Pretendard", sans-serif;
   font-weight: 400;
   overflow-x: hidden;
+  touch-action: pan-y; /* 가로 스크롤 터치 무시, 세로 스크롤은 허용 */
 }
 
 body::before {
