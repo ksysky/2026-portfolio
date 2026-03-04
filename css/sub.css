@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+/* 서브 헤더 */
+#sub_header {
+  padding: 90px 60px 50px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  background: #D2844E;
+  color: #fff;
+}
+
+#sub_header.sub_header_adap {
+  background: var(--sub2-color);
+}
+
+#sub_header p {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+#sub_header .sub_tit {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+#sub_header h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.btn {
+  font-size: 1.8rem;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #fff;
+  color: var(--sub1-color);
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* 서브 내용 */
+#sub {
+  padding: 120px 0;
+}
+
+#sub .sub_top {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+#sub .sub_top > * {
+  width: calc((100% - 40px) / 2);
+}
+
+#sub .sub_top img {
+  display: block;
+  width: 100%;
+  max-width: 780px;
+}
+
+#sub .sub_top .sub_desc .sub_desc_box {
+  padding: 20px;
+  border-bottom: 1px solid rgba(65, 41, 24, .3);
+  color: var(--main-color);
+}
+
+#sub .sub_top .sub_desc .sub_desc_box:last-child {
+  border-bottom: none;
+}
+
+#sub .sub_top .sub_desc .sub_desc_box .sub_desc_tit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+#sub .sub_top .sub_desc .sub_desc_box .sub_desc_tit i {
+  color: var(--sub1-color);
+  font-size: 2.8rem;
+}
+
+#sub .sub_top .sub_desc .sub_desc_box .sub_desc_tit h5 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+#sub .sub_top .sub_desc .sub_desc_box p {
+  font-size: 1.8rem;
+}
+
+.sub_img {
+  display: block;
+  width: 100%;
+  margin-top: 120px;
+}
+
+
+
+
+/* 반응형 */
+@media (max-width: 1400px) {
+  /* 서브 내용 */
+  #sub .sub_top {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #sub .sub_top .sub_desc {
+    width: 100%;
+    max-width: 780px;
+  }
+}
+
+@media (max-width: 1100px) {
+  /* 서브 헤더 */
+  #sub_header .sub_tit {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 840px) {
+  /* 서브 헤더 */
+  #sub_header {
+    padding: 40px 30px;
+  }
+
+  #sub_header h1 {
+    font-size: 3.5rem;
+  }
+
+  /* 서브 내용 */
+  #sub {
+    padding: 40px 0;
+  }
+
+  #sub .sub_top {
+    gap: 20px;
+  }
+
+  #sub .sub_top .sub_desc .sub_desc_box {
+    padding: 15px;
+  }
+
+  #sub .sub_top .sub_desc .sub_desc_box .sub_desc_tit {
+    gap: 5px;
+    margin-bottom: 6px;
+  }
+
+  .sub_img {
+    margin-top: 50px;
+  }
+}
