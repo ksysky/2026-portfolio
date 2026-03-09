@@ -346,7 +346,7 @@ main {
   width: 100%;
 }
 
-#projects .pro_cont .design {
+/* #projects .pro_cont .design {
   position: relative;
 }
 
@@ -365,7 +365,33 @@ main {
   object-fit: cover;
   border-radius: 30px;
   z-index: 0;
+} */
+
+#lightgallery a {
+  position: relative;
+  display: block;
+  border-radius: 30px;
+  overflow: hidden;
+  width: calc((100% - 60px) / 4);
 }
+
+#lightgallery a::after {
+  display: block;
+  content: "";
+  padding-bottom: 100%;
+}
+
+#lightgallery a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  z-index: 0;
+}
+
 
 
 /* 반응형 */
