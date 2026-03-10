@@ -438,7 +438,8 @@ main {
   }
 
   /* main - projects */
-  #projects .pro_cont .pro_list {
+  #projects .pro_cont .pro_list,
+  #lightgallery a {
     width: calc((100% - 40px) / 3);
   }
 }
@@ -449,7 +450,8 @@ main {
     gap: 18px;
   }
 
-  #projects .pro_cont .pro_list {
+  #projects .pro_cont .pro_list,
+  #lightgallery a {
     width: calc((100% - 18px) / 2);
   }
 }
@@ -603,7 +605,8 @@ main {
     gap: 5px;
   }
 
-  #projects .pro_cont .pro_list {
+  #projects .pro_cont .pro_list,
+  #lightgallery a {
     width: 100%;
     height: 270px;
     display: flex;
